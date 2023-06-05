@@ -230,10 +230,20 @@ const list = document.querySelector(".in-block__list");
 for (let i = 0; i < items.length; i++) {
   list.innerHTML += "<li>" + items[i].name + " " + items[i].category + " " + items[i].price + "</li>"
 }
+
+
 const inBtn = document.querySelector(".in-block__btn")
 const inName = document.querySelector(".in-name")
 const inPrice = document.querySelector(".in-price")
 const inCategory = document.querySelector(".in-category")
+
+function render() {
+  const inBtn = document.querySelector(".in-block__btn")
+  const inName = document.querySelector(".in-name")
+  const inPrice = document.querySelector(".in-price")
+  const inCategory = document.querySelector(".in-category")
+
+}
 
 inBtn.addEventListener("click", () => {
 
@@ -245,9 +255,12 @@ inBtn.addEventListener("click", () => {
     category: inCategory.value,
   });
 
+  //= = = = = = = ----- Пытаюсь оставить placeholder после заполнения поле. -----= = = = = = =\
+
   inName.value = " ";
   inPrice.value = " ";
   inCategory.value = " ";
+  inCategory.placeholder = "nick";
 
   console.log([inCategory]);
   console.log(items);
@@ -255,6 +268,7 @@ inBtn.addEventListener("click", () => {
   for (let i = 0; i < items.length; i++) {
     list.innerHTML += "<li>" + items[i].name + " " + items[i].category + " " + items[i].price + "</li>"
   }
+  render()
 
 })
 
