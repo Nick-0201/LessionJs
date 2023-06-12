@@ -12,7 +12,7 @@
 
   width: 600px;
   height: 600px;
-  background-color: chocolate;
+  background-color: green;
   margin: 0 auto;
 
 }
@@ -23,6 +23,7 @@
 }
 
 .in-block__list {
+  font-size: 40px;
   padding: 20px;
   text-align: center;
   list-style: none;

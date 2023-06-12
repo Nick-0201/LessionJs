@@ -237,17 +237,9 @@ const inName = document.querySelector(".in-name")
 const inPrice = document.querySelector(".in-price")
 const inCategory = document.querySelector(".in-category")
 
-function render() {
-  const inBtn = document.querySelector(".in-block__btn")
-  const inName = document.querySelector(".in-name")
-  const inPrice = document.querySelector(".in-price")
-  const inCategory = document.querySelector(".in-category")
-
-}
-
 inBtn.addEventListener("click", () => {
 
-  list.innerHTML = " "
+  list.innerHTML = ""
 
   items.push({
     name: inName.value,
@@ -256,19 +248,20 @@ inBtn.addEventListener("click", () => {
   });
 
   //= = = = = = = ----- Пытаюсь оставить placeholder после заполнения поле. -----= = = = = = =\
+  //= = = = = = = --------------------А он сволочь исчезает.----------------------= = = = = = =\
 
-  inName.value = " ";
-  inPrice.value = " ";
-  inCategory.value = " ";
-  inCategory.placeholder = "nick";
-
+  inName.value = "";
+  inPrice.value = "";
+  inCategory.value = "";
+  //= = = = = = = ----- смотрел как обратиться к placeholder -----= = = = = = =\
   console.log([inCategory]);
+  // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =\
   console.log(items);
 
   for (let i = 0; i < items.length; i++) {
     list.innerHTML += "<li>" + items[i].name + " " + items[i].category + " " + items[i].price + "</li>"
   }
-  render()
+
 
 })
 
