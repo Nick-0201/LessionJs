@@ -1,11 +1,19 @@
+._container {
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+
+.header {}
+
+
+/* ===================== */
 .out-block {
   width: 700px;
   height: 700px;
   background-color: antiquewhite;
   margin: 0 auto;
 }
-
-
 
 .in-block {
   display: block;
