@@ -5,17 +5,24 @@
     height: 60px;
   }
 
+  &__logo {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+
   &__nav {
     padding-top: 20px;
-    max-width: 300px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__list {
     padding: 0;
     display: flex;
-    justify-content: space-between;
     list-style: none;
+    gap: 30px;
   }
 
   &__link {
@@ -29,44 +36,96 @@
 
   &__burger {
     display: none;
+    width: 30px;
+    height: 18px;
+    position: relative;
+    z-index: 5;
     cursor: pointer;
 
-    &-bar {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
+    span {
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+      width: 100%;
+      height: 2px;
       background-color: white;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:last-child {
+        top: auto;
+        bottom: 0;
+      }
+    }
+
+    &.active {
+      span {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+
+        &:first-child {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          top: calc(50% - 1px);
+        }
+
+        &:last-child {
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          bottom: calc(50% - 1px);
+        }
+      }
     }
   }
-
-
 }
 
 @media(max-width:992px) {
   .header {
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+    }
 
     &__list {
-      display: none;
+      position: fixed;
+      right: -100%;
+      top: 60px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #262626;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      padding: 20px 0px;
+
+      &.active {
+        right: 0;
+        gap: 10px;
+      }
     }
 
     &__burger {
       display: block;
-    }
 
-    &-active {
-      &__bar:nth-child(2) {
-        opacity: 0;
-      }
+      &.active {
+        span {
+          -webkit-transform: scale(0);
+          transform: scale(0);
 
-      &__bar:nth-child(1) {
-        transform: translate(8px) rotate(45deg);
-      }
+          &:first-child {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            top: calc(50% - 1px);
+          }
 
-      &__bar:nth-child(3) {
-        transform: translate(-8px) rotate(-45deg);
+          &:last-child {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            bottom: calc(50% - 1px);
+          }
+        }
       }
     }
   }
