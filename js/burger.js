@@ -13,5 +13,5 @@ document.querySelectorAll(".header__link").forEach(i =>
   }))
 
 
-export let burgerExpo = burger
+export let burgerExpo = 0
 

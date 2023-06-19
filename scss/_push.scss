@@ -1,0 +1,16 @@
+.push {
+  background-color: wheat;
+
+  &__container {
+    padding: 30px 0px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__input {
+    display: block;
+  }
+
+}
