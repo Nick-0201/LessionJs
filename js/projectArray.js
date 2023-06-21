@@ -2,21 +2,21 @@ const project = [
   {
     imgUrl: "https://img.freepik.com/free-psd/google-icon-isolated-3d-render-illustration_47987-9777.jpg?w=2000",
 
-    imgUrl: "Google",
+    title: "Google",
 
     text: "Google Images — специальный сервис Google для поиска картинок в Интернете.    Googlebot- Image, поисковый робот, сканирующий страницы для индекса картинок, производит поиск изображений различных форматов.Аналогичные сервисы есть и у других поисковых систем - конкурентов Google.",
   },
   {
     imgUrl: "https://img.freepik.com/free-psd/google-icon-isolated-3d-render-illustration_47987-9777.jpg?w=2000",
 
-    imgUrl: "Google",
+    title: "Google",
 
     text: "Google Images — специальный сервис Google для поиска картинок в Интернете.    Googlebot- Image, поисковый робот, сканирующий страницы для индекса картинок, производит поиск изображений различных форматов.Аналогичные сервисы есть и у других поисковых систем - конкурентов Google.",
   },
   {
     imgUrl: "https://img.freepik.com/free-psd/google-icon-isolated-3d-render-illustration_47987-9777.jpg?w=2000",
 
-    imgUrl: "Google",
+    title: "Google",
 
     text: "Google Images — специальный сервис Google для поиска картинок в Интернете.    Googlebot- Image, поисковый робот, сканирующий страницы для индекса картинок, производит поиск изображений различных форматов.Аналогичные сервисы есть и у других поисковых систем - конкурентов Google.",
   },
@@ -33,4 +33,4 @@ project.map(item => {
   </div>
   `
 })
-export let projectExpo = content
+export let projectExpo = 0
