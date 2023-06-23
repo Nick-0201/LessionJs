@@ -7,5 +7,5 @@ burgerExpo();
 import { projectExpo } from './projectArray.js';
 projectExpo();
 
-import { addListExpo } from './ArrayFilter.js';
+import { addListExpo } from './ArrayFilterMap.js';
 addListExpo();
