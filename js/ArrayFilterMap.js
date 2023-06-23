@@ -1,9 +1,9 @@
-const names = [
-  "Nick",
-  "jhones",
-  "Alex",
-  "Nelly",
-]
+// const names = [
+//   "Nick",
+//   "jhones",
+//   "Alex",
+//   "Nelly",
+// ]
 
 // Просто рисуем html li 
 
@@ -51,17 +51,26 @@ const names = [
 // });
 // -----------------------------------------------------
 // задание филтровать по букве
+const names = [
+  "Nick",
+  "jhones",
+  "Alex",
+  "Nelly",
+]
+
 const list = document.querySelector(".add__list");
 const addbtn = document.querySelector(".add__btn");
-const addinput = document.querySelector(".add__input")
+const addinput = document.querySelector(".add__input");
 
+// ------------------ рисуем html эдементы -------------
 names.map(item => {
   list.innerHTML += `
   <li class="add__item">
   <a href="#" class="add__link">${item}</a>
   </li>
   `
-})
+});
+
 addbtn.addEventListener("click", () => {
   list.innerHTML = ""
   const filtredName = names.filter(item => item[0] === addinput.value);
@@ -70,8 +79,8 @@ addbtn.addEventListener("click", () => {
   <li class="add__item">
   <a href="#" class="add__link">${item}</a>
   </li>
-  `})
-})
-
+  `});
+});
+// -----------------------------------------------------
 
 export let addListExpo = 0;
