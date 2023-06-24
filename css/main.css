@@ -154,3 +154,22 @@
   font-size: 16px;
   line-height: 22px;
 }
+
+.drop-down__item {
+  list-style: none;
+}
+.drop-down__item:hover {
+  color: red;
+}
+.drop-down__link {
+  text-decoration: none;
+}
+.drop-down__link:hover {
+  color: red;
+}
+.drop-down__menu {
+  display: none;
+}
+.drop-down__menu.active {
+  display: block;
+}

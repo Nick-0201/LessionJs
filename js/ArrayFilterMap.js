@@ -53,7 +53,7 @@
 // задание филтровать по букве
 const names = [
   "Nick",
-  "jhones",
+  "Jhones",
   "Alex",
   "Nelly",
 ]
@@ -73,7 +73,7 @@ names.map(item => {
 
 addbtn.addEventListener("click", () => {
   list.innerHTML = ""
-  const filtredName = names.filter(item => item[0] === addinput.value);
+  const filtredName = names.filter(item => item.toLowerCase().includes(addinput.value.toLowerCase()));
   filtredName.map(item => {
     list.innerHTML += `
   <li class="add__item">
@@ -81,6 +81,7 @@ addbtn.addEventListener("click", () => {
   </li>
   `});
 });
+console.log([document.querySelector(".input__add-file")]);
 // -----------------------------------------------------
 
 export let addListExpo = 0;

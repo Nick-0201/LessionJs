@@ -1,0 +1,25 @@
+.drop-down {
+  &__item {
+    list-style: none;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

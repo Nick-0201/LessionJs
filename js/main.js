@@ -9,3 +9,6 @@ projectExpo();
 
 import { addListExpo } from './ArrayFilterMap.js';
 addListExpo();
+
+import { dropExpo } from './drop.js';
+dropExpo();
